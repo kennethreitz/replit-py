@@ -1,4 +1,4 @@
-# import replit
+# >>> import replit
 
 Let's build some excellent things on [repl.it](https://repl.it) with Python!
 
