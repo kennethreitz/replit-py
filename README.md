@@ -14,7 +14,7 @@ This repository is the home for the `replit` Python package, which provides:
 Other helpful toys & utilities, like...
 
 - A simple audio library that can play tones and audio files!
-- Some helpful functions for displaying ANSI colors in interactive terminal sessions.
+- Some helpful functions for displaying ANSI colors within interactive terminal sessions.
 
 ### License
 
