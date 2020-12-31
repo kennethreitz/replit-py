@@ -1,9 +1,9 @@
-# >>> import replit
+# `replit` Python Package
 
 Let's build some excellent things on [repl.it](https://repl.it) with Python!
 
 
-## `replit` Python Package
+## `>>> import replit`
 
 This repository is the home for the `replit` Python package, which provides:
 
