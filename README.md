@@ -21,7 +21,7 @@ This repository is the home for the `replit` Python package, which provides:
 - A **work in progress** Repl.it user profile lookup.
 - A Flask application decorator for ensuring Repl.it Auth required on specific routes.
 
-& other helpful toys & utilities, like...
+& other helpful toys and utilities, like...
 
 - A simple audio library that can play tones and audio files!
 - Some helpful functions for displaying ANSI colors within interactive terminal sessions.
