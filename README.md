@@ -25,4 +25,4 @@ This repository is the home for the `replit` Python package, which provides:
 
 ### Open Source License
 
-This library is licensed under the [ISC License](https://en.wikipedia.org/wiki/ISC_license) and is free for you to use, change, or profit from!
+This library is licensed under the [ISC License](https://en.wikipedia.org/wiki/ISC_license) and is free for you to use, change, or even profit from!
