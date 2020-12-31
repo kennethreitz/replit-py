@@ -3,14 +3,10 @@
 
 The Repl.it Python environment does not require any platform-specific code, however, these optional utilities provide additional platform features in a simple and accessible way.
 
-*Example*: [Repl.it DB](https://docs.repl.it/misc/database) is an HTTP service, but an optional Python client (here!) is available.
-
-
 ![compute](https://github.com/kennethreitz42/replit-py/blob/kr-cleanup/ext/readme.gif?raw=true)
 
 
-Let's build some excellent things on [Repl.it](https://repl.it) with Python!
-
+*Example*: [Repl.it DB](https://docs.repl.it/misc/database) is an HTTP service, but an optional Python client (here!) is available.
 
 
 ### `>>> import replit`
