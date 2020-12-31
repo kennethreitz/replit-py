@@ -2,6 +2,9 @@
 
 Let's build some excellent things on [Repl.it](https://repl.it) with Python!
 
+
+![compute](https://github.com/kennethreitz42/replit-py/blob/kr-cleanup/ext/readme.gif?raw=true)
+
 ---------------------
 
 
