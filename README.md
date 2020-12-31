@@ -1,4 +1,4 @@
-# `replit` Python Package
+# `replit` Python Module
 
 
 The Repl.it Python environment does not require any platform-specific code, however, these optional utilities provide additional platform features in a simple and accessible way.
