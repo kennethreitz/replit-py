@@ -3,7 +3,7 @@
 Let's build some excellent things on [Repl.it](https://repl.it) with Python!
 
 
-## `>>> import replit`
+### `>>> import replit`
 
 This repository is the home for the `replit` Python package, which provides:
 
