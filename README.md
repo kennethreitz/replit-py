@@ -2,7 +2,7 @@
 
 Let's build some excellent things on [Repl.it](https://repl.it) with Python!
 
-While you are certianly able to build software within our environment without any platform-specific code, these utilities have been made to make additional features of the platform available and easily accessible in Python.
+The Repl.it Python environment does not require any platform-specific code, however, these optional utilities provide additional platform features in a simple and accessible way.
 
 *Example*: [Repl.it DB](https://docs.repl.it/misc/database) is an HTTP service, but an optional Python client (here!) is available.
 
