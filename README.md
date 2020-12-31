@@ -23,6 +23,6 @@ Other helpful toys & utilities, like...
 - A simple audio library that can play tones and audio files!
 - Some helpful functions for displaying ANSI colors within interactive terminal sessions.
 
-### License
+### Open Source License
 
 This library is licensed under the [ISC License](https://en.wikipedia.org/wiki/ISC_license) and is free for you to use, change, or profit from!
