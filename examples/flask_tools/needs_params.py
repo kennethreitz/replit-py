@@ -1,6 +1,6 @@
-from replit import maqpy
+from replit import flask_tools
 
-app = maqpy.App(__name__)
+app = flask_tools.App(__name__)
 
 
 @app.route("/")

@@ -1,6 +1,5 @@
 """Pure Python ANSI Color Escape Code generator."""
 
-
 import colorsys
 
 

@@ -1,4 +1,5 @@
 """Utitilities to make development easier."""
+
 from functools import wraps
 import time
 from typing import Any, Callable, Iterable, Optional, Union

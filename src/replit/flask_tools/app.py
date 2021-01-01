@@ -1,4 +1,5 @@
-"""Core of maqpy."""
+"""Core of flask_tools."""
+
 from dataclasses import dataclass
 from functools import wraps
 from pathlib import Path
@@ -10,7 +11,7 @@ from .utils import sign_in
 
 
 @dataclass
-class ReplitAuthContext:
+class ReplitUserContext:
     """A dataclass defining a Repl Auth state."""
 
     user_id: int
@@ -19,7 +20,7 @@ class ReplitAuthContext:
 
     @classmethod
     def from_headers(cls, headers: dict) -> Any:
-        """Initialize an instance using the Replit magic headers.
+        """Initialize an instance using the Replit identification headers.
 
         Args:
             headers (dict): A dictionary of headers received
@@ -34,8 +35,8 @@ class ReplitAuthContext:
         )
 
     @property
-    def signed_in(self) -> bool:
-        """Check whether the user is signed in with repl auth.
+    def is_authenticated(self) -> bool:
+        """Check whether the user is authenticated in with Replit Auth.
 
         Returns:
             bool: whether or not the authentication is activated.
@@ -43,7 +44,7 @@ class ReplitAuthContext:
         return bool(self.name)
 
 
-class Request(flask.Request):
+class ReplitRequest(flask.Request):
     """Represents a client request."""
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
@@ -57,23 +58,23 @@ class Request(flask.Request):
         self.update_auth()
 
     def update_auth(self) -> None:
-        """Update the auth property to be a ReplitAuthContext."""
-        self.auth = ReplitAuthContext.from_headers(self.headers)
+        """Update the user_info property to be a ReplitUserContext."""
+        self.user_info = ReplitUserContext.from_headers(self.headers)
 
     @property
-    def signed_in(self) -> bool:
-        """Check whether the user is signed in with repl auth.
+    def is_authenticated(self) -> bool:
+        """Check whether the user is authenticated with Replit.
 
         Returns:
             bool: Whether or not the user is signed in
         """
-        return self.auth.signed_in
+        return self.user_info.is_authenticated
 
 
-class App(flask.Flask):
+class ReplitApp(flask.Flask):
     """Represents a web application."""
 
-    request_class = Request
+    request_class = ReplitRequest
 
     def __init__(
         self, import_name: str, nice_jinja: bool = True, **kwargs: Any
@@ -154,7 +155,7 @@ class App(flask.Flask):
         )
 
     def _run(self, *args: Any, **kwargs: Any) -> Any:
-        """Interface with the underlying flask instance's run function.
+        """Interface with the underlying Flask instance's run function.
 
         Args:
             args (Any): The arguments to be passed to the superclass' run method.
