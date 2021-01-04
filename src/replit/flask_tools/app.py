@@ -12,7 +12,7 @@ from .utils import sign_in
 
 @dataclass
 class ReplitUserContext:
-    """A dataclass defining a Repl Auth state."""
+    """A dataclass defining a Replit Auth state."""
 
     user_id: int
     name: str

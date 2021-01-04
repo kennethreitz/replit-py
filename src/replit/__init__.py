@@ -5,6 +5,8 @@ from . import termutils
 from .audio import Audio
 from .database import db
 
+from .users import ReplitUser
+
 # Backwards compatibility.
 from .termutils import clear
 
