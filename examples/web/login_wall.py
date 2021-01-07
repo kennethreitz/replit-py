@@ -1,12 +1,12 @@
 """An example of the app.login_wall() feature."""
-from replit.flask_tools import ReplitApp, Link
-from replit.flask_tools import auth_info
+from replit.web import ReplitApp, Link
+from replit.web import auth_info
 
-app = flask_tools.ReplitApp(__name__)
+app = web.ReplitApp(__name__)
 
 
 def login_page() -> str:
-    return "Hello, please sign in to access this page!\n" + flask_tools.sign_in_snippet
+    return "Hello, please sign in to access this page!\n" + web.sign_in_snippet
 
 
 # this is an example of the arguments, but the exclude kwarg already defaults to this
@@ -16,12 +16,12 @@ app.login_wall(exclude=["/"], handler=login_page)
 
 @app.route("/")
 def index() -> str:
-    return f"Hello! {flask_tools.Link('check out this page', href='/page')}"
+    return f"Hello! {web.Link('check out this page', href='/page')}"
 
 
 @app.route("/page")
 def page() -> str:
-    return f"Hello {flask_tools.auth.name}, if you are reading this you signed in."
+    return f"Hello {web.auth.name}, if you are reading this you signed in."
 
 
 if __name__ == "__main__":

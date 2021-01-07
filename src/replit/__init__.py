@@ -1,10 +1,9 @@
 """The Replit Python module."""
 
-from . import flask_tools
+from . import web
 from . import termutils
 from .audio import Audio
 from .database import db
-
 from .users import ReplitUser
 
 # Backwards compatibility.
