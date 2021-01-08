@@ -126,14 +126,16 @@ class Bit:
         self.bg = f"\033[48;5;{value}m"
 
 
-attributes = {  # use only repl.it supported ansi codes. Codes such as blink do not work.
-    "reset": 0,
-    "bold": 1,
-    "faint": 2,
-    "italic": 3,
-    "underline": 4,
-    "highlight": 7,
-}
+attributes = (
+    {  # use only repl.it supported ansi codes. Codes such as blink do not work.
+        "reset": 0,
+        "bold": 1,
+        "faint": 2,
+        "italic": 3,
+        "underline": 4,
+        "highlight": 7,
+    }
+)
 
 
 class Attr:

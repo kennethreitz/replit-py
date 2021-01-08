@@ -1,3 +1,2 @@
-
-
-- GraphQL changes on backend to formalize gathering profile information.
+- DB: convience methods like nuke and a CLI to interact with it?
+- User: GraphQL changes on backend to formalize gathering profile information.

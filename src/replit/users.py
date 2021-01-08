@@ -4,42 +4,39 @@ from requests_html import HTMLSession
 http = HTTPSession()
 html_http = HTMLSession()
 
+# TODO: provide a way to list repls.
+
 
 class ReplitUser:
     def __init__(self):
-        #  validate_username=False
-        # self.user_id = None
         self.username = None
         self.name = None
         self.bio = None
         self.avatar_url = None
         self.languages = None
-        # self.roles = None
-
-    # @classmethod
-    # def from_user_id(_class, user_id):
-    #     # TODO: find a way to reverse username from user_id (ask eng?)
-    #     pass
 
     @classmethod
     def from_username(_class, username):
+        """Creates a new ReplitUser object from a given Repl.it profile name."""
         # TODO: catch non-existient users.
         url = _class._replit_url_from_username(username)
         return _class.from_replit_profile_url(url)
 
     @classmethod
     def from_replit_profile_url(_class, url):
-        # https://repl.it/@kennethreitz42
+        """Creates a new ReplitUser object from a given Repl.it profile URL."""
+
+        # Fetch the profile from the web, and encapsulate its HTML.
         r = html_http.get(url=url)
         html = r.html
 
+        # Instantiate the class.
         user = _class()
 
+        # Populate the user instance from parsed HTML.
         user.name = user.__extract_name(html)
         user.bio = user.__extract_bio(html)
         user.avatar_url = user.__extract_avatar_url(html)
-        # user.languages = user.__extract_languages(html)
-        # user.roles = user.__extract_roles(html)
 
         return user
 
@@ -71,13 +68,7 @@ class ReplitUser:
 
         return avatar_url
 
-    # def __extract_languages(self, html):
-    #     pass
 
-    # def __extract_roles(self, html):
-    #     pass
-
-    # list repls
-
-
+# Syntax suagar.
+User = ReplitUser
 print(ReplitUser.from_username("kennethreitz42").avatar_content)
