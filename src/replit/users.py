@@ -69,5 +69,10 @@ class ReplitUser:
         return avatar_url
 
 
+def get_user(username):
+    """Creates a new ReplitUser object from a given Repl.it profile name."""
+
+    return ReplitUser.from_username(username)
+
 # Syntax suagar.
 User = ReplitUser
