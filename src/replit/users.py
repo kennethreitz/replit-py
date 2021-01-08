@@ -71,4 +71,3 @@ class ReplitUser:
 
 # Syntax suagar.
 User = ReplitUser
-print(ReplitUser.from_username("kennethreitz42").avatar_content)
