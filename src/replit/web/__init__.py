@@ -10,17 +10,7 @@ from . import html
 from .app import ReplitApp
 from .files import File
 from .html import HTMLElement, Link, Page, Paragraph
-from .utils import (
-    authed_ratelimit,
-    chain_decorators,
-    find,
-    local_redirect,
-    needs_params,
-    needs_sign_in,
-    sign_in,
-    sign_in_page,
-    sign_in_snippet,
-)
+from .utils import *
 from ..database import AsyncDatabase, AsyncJSONKey, Database, db, JSONKey
 
 auth = LocalProxy(lambda: flask.request.auth)
@@ -43,3 +33,6 @@ def user_data(username: str) -> JSONKey:
 
 
 current_user_data = LocalProxy(lambda: user_data(flask.request.auth.name))
+
+# Syntax sugar.
+App = ReplitApp

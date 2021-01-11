@@ -84,10 +84,7 @@ class AsyncJSONKey:
             return await self._error("Invalid JSON data read", read)
 
         if not self._is_valid_type(data):
-            return await self._error(
-                self._type_mismatch_msg(data),
-                read,
-            )
+            return await self._error(self._type_mismatch_msg(data), read,)
         return data
 
     async def _error(self, error: str, read: str) -> JSON_TYPE:
@@ -203,6 +200,7 @@ class JSONKey(AsyncJSONKey):
             self.db[self.key] = default
             return default
 
+        # TODO: ReplitDb isn't defined here, so this will throw an exception.
         if isinstance(self.db, ReplitDb):
             try:
                 data = json.loads(read)
@@ -212,10 +210,7 @@ class JSONKey(AsyncJSONKey):
             data = read
 
         if not self._is_valid_type(data):
-            return self._error(
-                self._type_mismatch_msg(data),
-                read,
-            )
+            return self._error(self._type_mismatch_msg(data), read,)
         return data
 
     def _error(self, error: str, read: str) -> JSON_TYPE:

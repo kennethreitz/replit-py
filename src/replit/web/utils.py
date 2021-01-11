@@ -15,6 +15,9 @@ sign_in_snippet = (
     'src="https://auth.turbio.repl.co/script.js"></script>'
 )
 
+def whoami():
+    """Returns the username of the authenticated Replit user, else None."""
+    return flask.request.headers.get('X-Replit-User-Name')
 
 def sign_in(title: str = "Please Sign In") -> Page:
     """Return a sign-in page.
@@ -47,7 +50,7 @@ def needs_sign_in(func: Callable = None, login_res: str = sign_in_page) -> Calla
     def decorator(func: Callable) -> Callable:
         @wraps(func)
         def handler(*args: Any, **kwargs: Any) -> flask.Response:
-            if flask.request.signed_in:
+            if flask.request.is_authenticated:
                 return func(*args, **kwargs)
             else:
                 return login_res

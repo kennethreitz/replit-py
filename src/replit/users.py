@@ -1,37 +1,54 @@
+# TODO: provide a way to list repls.
+
+import os
+
 from requests import Session as HTTPSession
 from requests_html import HTMLSession
 
+# Environment variable configuration.
+REPLIT_DOMAIN = os.environ.get("REPLIT_DOMAIN", "repl.it")
+
+# Connection-pooling for HTTP requests.
 http = HTTPSession()
 html_http = HTMLSession()
 
-# TODO: provide a way to list repls.
-
 
 class ReplitUser:
-    def __init__(self):
-        self.username = None
+    def __init__(self, username=None):
+        self.username = username
         self.name = None
         self.bio = None
         self.avatar_url = None
-        self.languages = None
+
+    def __repr__(self):
+        return f'<ReplitUser "@{self.username}">'
+
+    @property
+    def as_dict(self):
+        return {
+            "username": self.username,
+            "name": self.name,
+            "bio": self.bio,
+            "avatar_url": self.avatar_url,
+        }
+
+    @staticmethod
+    def _replit_url_from_username(username):
+        return f"https://{REPLIT_DOMAIN}/@{username}"
 
     @classmethod
     def from_username(_class, username):
         """Creates a new ReplitUser object from a given Repl.it profile name."""
+
         # TODO: catch non-existient users.
         url = _class._replit_url_from_username(username)
-        return _class.from_replit_profile_url(url)
-
-    @classmethod
-    def from_replit_profile_url(_class, url):
-        """Creates a new ReplitUser object from a given Repl.it profile URL."""
 
         # Fetch the profile from the web, and encapsulate its HTML.
         r = html_http.get(url=url)
         html = r.html
 
         # Instantiate the class.
-        user = _class()
+        user = _class(username=username)
 
         # Populate the user instance from parsed HTML.
         user.name = user.__extract_name(html)
@@ -44,10 +61,6 @@ class ReplitUser:
     def avatar_content(self):
         if self.avatar_url:
             return http.get(self.avatar_url).content
-
-    @staticmethod
-    def _replit_url_from_username(username):
-        return f"https://repl.it/@{username}"
 
     def __extract_name(self, html):
         return html.find("h1", first=True).text
@@ -69,10 +82,11 @@ class ReplitUser:
         return avatar_url
 
 
-def get_user(username):
+def get_profile(username):
     """Creates a new ReplitUser object from a given Repl.it profile name."""
 
     return ReplitUser.from_username(username)
+
 
 # Syntax suagar.
 User = ReplitUser

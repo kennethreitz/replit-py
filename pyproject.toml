@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "replit"
-version = "2.0.0"
+name = "replitdev"
+version = "2.2.11"
 description = "A library for interacting with features of repl.it"
 authors = ["mat <pypi@matdoes.dev>", "Scoder12 <pypi@scoder12.ml>", "AllAwesome497", "Repl.it <contact@repl.it>"]
 license = "MIT"
