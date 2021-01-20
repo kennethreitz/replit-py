@@ -32,7 +32,7 @@ def user_data(username: str) -> JSONKey:
     return db.jsonkey(username, dict)
 
 
-current_user_data = LocalProxy(lambda: user_data(flask.request.auth.name))
+current_user_data = LocalProxy(lambda: user_data(flask.request.user_info.name))
 
 # Syntax sugar.
 App = ReplitApp

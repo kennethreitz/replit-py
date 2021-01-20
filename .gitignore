@@ -1,3 +1,5 @@
+.
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -134,3 +136,4 @@ Pipfile
 Pipfile.lock
 t.py
 repl-tweet.py
+.DS_Store

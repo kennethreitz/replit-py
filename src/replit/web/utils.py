@@ -178,7 +178,7 @@ def authed_ratelimit(
             nonlocal last_reset
             nonlocal num_requests
 
-            name = flask.request.auth.name
+            name = flask.request.user_info.name
             now = time.time()
 
             if now - last_reset >= period:
