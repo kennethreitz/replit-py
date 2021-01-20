@@ -1,15 +1,8 @@
-# `replit` Python Module
-
-
-The [Repl.it](https://repl.it/) Python environment does not require any platform-specific code, however, these optional utilities provide additional platform features in a simple and accessible way.
+### `>>> import replit`
 
 ![compute](https://github.com/kennethreitz42/replit-py/blob/kr-cleanup/ext/readme.gif?raw=true)
 
 
-*Example*: [Repl.it DB](https://docs.repl.it/misc/database) is an HTTP service, but an optional Python client (here!) is available.
-
-
-### `>>> import replit`
 
 This repository is the home for the `replit` Python package, which provides:
 
@@ -21,6 +14,18 @@ This repository is the home for the `replit` Python package, which provides:
 
 - A simple audio library that can play tones and audio files!
 - Some helpful functions for displaying ANSI colors within interactive terminal sessions.
+
+
+
+
+### It's worth noting…
+
+
+The [Repl.it](https://repl.it/) Python environment does not require any platform-specific code, however, these optional utilities provide additional platform features in a simple and accessible way.
+
+
+*Example*: [Repl.it DB](https://docs.repl.it/misc/database) is an HTTP service, but an optional Python client (here!) is available.
+
 
 ### Open Source License
 
