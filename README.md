@@ -1,5 +1,9 @@
 ### `>>> import replit`
 
+![compute](https://github.com/kennethreitz42/replit-py/blob/kr-cleanup/ext/readme.gif?raw=true)
+
+
+
 This repository is the home for the `replit` Python package, which provides:
 
 - A fully-featured database client for [Repl.it DB](https://docs.repl.it/misc/database). **[[docs]](https://example.com)**
@@ -12,8 +16,6 @@ This repository is the home for the `replit` Python package, which provides:
 - Some helpful functions for displaying ANSI colors within interactive terminal sessions.
 
 
-
-![compute](https://github.com/kennethreitz42/replit-py/blob/kr-cleanup/ext/readme.gif?raw=true)
 
 
 ### It's worth noting…
