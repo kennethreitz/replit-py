@@ -7,7 +7,7 @@ license = "ISC"
 readme = "README.md"
 repository = "https://github.com/replit/replit-py"
 homepage = "https://github.com/replit/replit-py"
-documentation = "https://replit-python-docs.scoder12.repl.co"
+documentation = "https://replit-py.readthedocs.org/"
 
 [tool.poetry.dependencies]
 python = "^3.8"
