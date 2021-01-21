@@ -31,3 +31,4 @@ websockets==8.1; python_full_version >= "3.6.1" and python_full_version < "4.0.0
 werkzeug==1.0.1; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.5.0")
 yarl==1.6.3; python_version >= "3.6"
 sphinx_autodoc_typehints
+alabaster
