@@ -48,11 +48,11 @@ In this tutorial, we are you going to build a Web Service – a process
 that responds to incoming HTTP Requests, like the ones that come from
 web browsers or even API Clients.
 
--  HTTP, if you aren’t familiar, is a protocol that allows modern
-   machines (and users of them) to interoperate. You use HTTP every time
-   you open an app on your phone that talks with the web. If you can’t
-   use an app on your phone without internet, it’s because it’s talking
-   to another computer (a server), mostly likely with HTTP.
+`HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_, if you aren’t familiar, is a protocol that allows modern
+machines (and users of them) to interoperate. You use HTTP every time
+you open an app on your phone that talks with the web. If you can’t
+use an app on your phone without internet, it’s because it’s talking
+to another computer (a server), mostly likely with HTTP.
 
 The Basics
 ----------
