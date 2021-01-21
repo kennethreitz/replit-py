@@ -16,6 +16,8 @@ import sys
 sys.path.insert(0, os.path.abspath("../src"))
 sys.path.append(os.path.abspath("../src"))
 
+import replit
+
 
 # -- Project information -----------------------------------------------------
 
@@ -67,7 +69,7 @@ html_theme_options = {
 html_sidebars = {
     'index':    ['sidebarintro.html', 'sourcelink.html', 'searchbox.html',
                  'hacks.html'],
-    '**':       ['sidebarlogo.html', 'localtoc.html', 'relations.html',
+    '**':       ['sidebarintro.html', 'localtoc.html', 'relations.html',
                  'sourcelink.html', 'searchbox.html', 'hacks.html']
 }
 

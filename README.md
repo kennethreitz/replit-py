@@ -2,20 +2,16 @@
 
 ![compute](https://github.com/kennethreitz42/replit-py/blob/kr-cleanup/ext/readme.gif?raw=true)
 
-
-
 This repository is the home for the `replit` Python package, which provides:
 
-- A fully-featured database client for [Repl.it DB](https://docs.repl.it/misc/database). **[[docs]](https://example.com)**
-- A **work in progress** Repl.it user profile lookup. **[[docs]](https://example.com)**
-- A Flask application decorator for ensuring Repl.it Auth required on specific routes. **[[docs]](https://example.com)**
+- A fully-featured database client for [Replit DB](https://docs.repl.it/misc/database).
+- A Flask–based application framework for accellerating development on the platform.
+- Replit user profile metadata retreival (more coming here!).
 
 & other helpful toys and utilities, like...
 
 - A simple audio library that can play tones and audio files!
 - Some helpful functions for displaying ANSI colors within interactive terminal sessions.
-
-
 
 
 ### It's worth noting…

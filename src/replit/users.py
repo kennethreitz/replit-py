@@ -14,10 +14,15 @@ html_http = HTMLSession()
 
 
 class ReplitUser:
+    """A Replit user's petadata."""
     def __init__(self, username=None):
+        #: The profile's username.
         self.username = username
+        #: The profile's given name.
         self.name = None
+        #: The profile's given bio.
         self.bio = None
+        #: The URL to the profile's avatar image.
         self.avatar_url = None
 
     def __repr__(self):
@@ -25,6 +30,7 @@ class ReplitUser:
 
     @property
     def as_dict(self):
+        """The metadata of the given profile, as a dictionary."""
         return {
             "username": self.username,
             "name": self.name,
@@ -34,6 +40,7 @@ class ReplitUser:
 
     @staticmethod
     def _replit_url_from_username(username):
+        """Construct a Replit URL from a username."""
         return f"https://{REPLIT_DOMAIN}/@{username}"
 
     @classmethod
@@ -59,6 +66,7 @@ class ReplitUser:
 
     @property
     def avatar_content(self):
+        """The binary content of the user profile's avatar."""
         if self.avatar_url:
             return http.get(self.avatar_url).content
 

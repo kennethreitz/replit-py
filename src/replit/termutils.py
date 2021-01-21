@@ -97,7 +97,7 @@ class Color:
           color : RGB colors from Hex Value
         """
         try:
-            r, g, b = colorsys.hls_to_rgb(h, s, v)
+            r, g, b = colorsys.hls_to_rgb(h, s, l)
         except:
             raise ValueError("Converting HLS to RGB ran into an error")
 

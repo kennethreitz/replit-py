@@ -10,7 +10,7 @@ from werkzeug.local import LocalProxy
 from .html import Page
 
 
-sign_in_snippet = (
+authentication_snippet = (
     '<script authed="location.reload()" '
     'src="https://auth.turbio.repl.co/script.js"></script>'
 )
@@ -28,7 +28,7 @@ def sign_in(title: str = "Please Sign In") -> Page:
     Returns:
         Page: The sign-in page.
     """
-    return Page(title=title, body=sign_in_snippet)
+    return Page(title=title, body=authentication_snippet)
 
 
 sign_in_page = sign_in()
@@ -245,3 +245,7 @@ def chain_decorators(*decorators: Callable[[Callable], Any]) -> Callable:
     if not decorators:
         raise TypeError("You must provide at least one decorator to chain")
     return dec
+
+# Syntax sugar.
+sign_in_snippet = authentication_snippet
+login_snippet = authentication_snippet
